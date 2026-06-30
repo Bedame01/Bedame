@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anton", ui-sans-serif, system-ui, sans-serif;
+  --text-display: "Anton";
+
+  --color-background: #f4f3ef;
+  --color-foreground: #0a0a0a;
+  --color-muted: #6b6b6b;
+  --color-border: #d4d3cf;
+  --color-accent: #0a0a0a;
+  --color-card: #ebeae6;
+  --aspect-ratio-supported: auto;
+}
+
+.dark {
+  --color-background: #0a0a0a;
+  --color-foreground: #f4f3ef;
+  --color-muted: #9a9a9a;
+  --color-border: #2a2a2a;
+  --color-accent: #f4f3ef;
+  --color-card: #141414;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-foreground text-background;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-family: var(--font-display);
+  }
+
+  .section-padding {
+    @apply px-6 sm:px-8 md:px-13 lg:px-20 py-15 md:py-20 lg:py-28;
+  }
+
+  .container-wide {
+    @apply max-w-[1400px] mx-auto w-full;
+  }
+
+  .link-hover {
+    @apply relative inline-block transition-opacity hover:opacity-60;
+  }
+
+  .heading-xl {
+    font-family: var(--font-display);
+    @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium leading-[0.95] tracking-tight;
+  }
+
+  .heading-lg {
+    font-family: var(--font-display);
+    @apply text-4xl sm:text-5xl md:text-6xl font-medium leading-[1] tracking-tight;
+  }
+
+  .title{
+    @apply text-display uppercase text-8xl! md:text-9xl! lg:text-[150px]!
+  }
+
+  .title2{
+    @apply text-display uppercase text-7xl! md:text-8xl! lg:text-[130px]!
+  }
+
+  .desc{
+    @apply text-foreground font-medium max-w-xl md:max-w-4xl text-xl/7 md:text-3xl! lg:text-4xl/12!
+  }
+
+  .heading-md {
+    font-family: var(--font-display);
+    @apply text-3xl sm:text-4xl md:text-5xl font-medium leading-[1.05] tracking-tight;
+  }
+
+  .marquee {
+    user-select: none !important;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)
+  }
+
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+*.textDisplay {
+  font-family: var(--text-display);
+  text-transform: uppercase !important;
+}
+
+section .heroDisplay {
+  flex: 0 0 auto !important;
+}
+
+/* =========== RESPONSIVE DESIGN =========== */
+@media (max-width: 809.98px) {
+    section .heroDisplay {
+      aspect-ratio: 1 / 1;
+      height: 40%;
+      position: relative;
+      top: unset;
+      width: 100%;
+    }
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+    section .heroDisplay {
+      aspect-ratio: 1.125 / 1;
+      height: var(--aspect-ratio-supported, 720px);
+      position: relative !important;
+      top: unset !important;
+      width: 100%;
+    }
+}

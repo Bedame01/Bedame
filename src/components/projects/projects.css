@@ -1,0 +1,372 @@
+*{
+    transition: all .4s ease !important;
+}
+
+.projectSection{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.projectContainer{
+    display: grid;
+    flex: none;
+    gap: 0px;
+    grid-auto-rows: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    height: min-content;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.projectLink{
+    --border-bottom-width: 0px;
+    --border-color: #262626;
+    --border-left-width: 1px;
+    --border-right-width: 0px;
+    --border-style: solid;
+    --border-top-width: 1px;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: start;
+    /* background-color: var(--token-f9eada81-bb7c-4779-8502-0f6609a61570, #111111); */
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+    justify-self: start;
+    overflow: hidden;
+    padding: 70px 22px 22px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    /* will-change: var(--framer-will-change-effect-override, transform); */
+}
+
+.projectContainer .projectLink:nth-child(1), .wrapper .projectLink:nth-child(1){
+    border-right: 1px solid var(--color-border);
+}
+
+.linkContent{
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    height: min-content;
+    justify-content: flex-start;
+    padding: 0 0 50px 50px;
+    position: relative;
+    width: 100%;
+}
+
+.content1{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: min-content;
+}
+
+.content1 .text1 p{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* gap: 3px; */
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: min-content;
+}
+
+.content1 .text2{
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto;
+}
+
+.content2{
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    transform: none;
+    flex: none;
+    height: auto;
+    max-width: 90%;
+    position: relative;
+    width: 100%;
+}
+
+.content3{
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    transform: none;
+}
+
+.ssr-variant, .viewAllProject{
+    display: contents;
+}
+
+.linkImgWrapper{
+    aspect-ratio: 1.6092362344582594 / 1;
+    border-radius: 10px;
+    flex: none;
+    height: var(--aspect-ratio-supported, 346px);
+    position: relative;
+    width: 100%;
+}
+
+.linkImgWrapper div{
+    position: absolute;
+    border-radius: inherit;
+    inset: 0px;
+}
+
+.linkImgWrapper div .img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-position: center center;
+    object-fit: cover;
+}
+
+.projectContainer2{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: min-content;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.wrapper{
+    display: grid;
+    flex: 2 0 0px;
+    gap: 0px;
+    grid-auto-rows: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(50px, 1fr));
+    height: min-content;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 1px;
+    z-index: 1;
+}
+
+.viewAllProject div{
+    align-self: stretch;
+    flex: 1 0 0px;
+    height: auto;
+    position: relative;
+    width: 1px;
+}
+
+.viewAllLink{
+    cursor: unset;
+    height: 200px;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: 563px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: 467px;
+}
+
+.viewAllLink div{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1 0 0px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    padding: 22px !important;
+    padding: 0;
+    position: relative;
+    width: 1px;
+    &:hover {
+        padding: 0 !important;
+    }
+}
+
+.wrap1{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: 1 0 0px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 1px;
+    border-radius: 10px;
+    &:hover{
+        border-radius: 0;
+    }
+}
+
+.wrap2{
+    align-content: center;
+    display: flex;
+    align-items: center;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 22px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content;
+}
+
+.wrapA{
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    flex-shrink: 0;
+    transform: none;
+    opacity: 1;
+    flex: none;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto;
+}
+
+.wrapB{
+    flex: none;
+    height: 45px;
+    position: relative;
+    width: 45px;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+    fill: var(--color-foreground) !important;
+    color: var(--color-foreground) !important;
+    transform: none;
+    opacity: 1;
+}
+
+.wrapB div{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: inherit;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .projectSection{
+        order: 2;
+    }
+
+    .projectContainer {
+        grid-template-columns: repeat(1, minmax(50px, 1fr));
+    }
+
+    .projectLink{
+        padding: 30px 24px 24px;
+    }
+
+    .linkContent{
+        gap: 14px;
+        padding: 0 0 34px;
+    }
+
+    .linkImgWrapper{
+        height: var(--aspect-ratio-supported, 213px);
+    }
+
+    .projectContainer2{
+        flex-direction: column;
+    }
+
+    .wrapper{
+        flex: none;
+        grid-template-columns: repeat(1, minmax(50px, 1fr));
+        width: 100%;
+    }
+
+    .viewAllProject div{
+        align-self: unset;
+        flex: none;
+        height: 210px;
+        width: 100%;
+    }
+
+    .projectContainer .projectLink:nth-child(1), .wrapper .projectLink:nth-child(1){
+        border-right: none !important;
+    }
+}

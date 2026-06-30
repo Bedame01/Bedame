@@ -1,0 +1,130 @@
+div.projectContainer *{
+    transition: all .4s ease !important;
+}
+
+div.projectContainer {
+    place-content: center flex-start;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: wrap;
+    gap: 0px;
+    height: min-content;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+}
+
+div.projectContainer div.projectCard {
+    flex: 0 0 auto;
+    height: auto;
+    position: relative;
+    width: 50%;
+}
+
+.projectLink {
+    place-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    gap: 0px;
+    height: min-content;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    /* width: 960px; */
+}
+
+.wrapper {
+    aspect-ratio: 1.2 / 1;
+    flex: 0 0 auto;
+    height: var(--aspect-ratio-supported, 167px);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper div {
+    flex: 0 0 auto;
+    height: 101%;
+    left: calc(-0.5%);
+    position: absolute;
+    top: calc(-0.5%);
+    width: 101%;
+}
+
+.imgWrapper {
+    position: absolute;
+    border-radius: inherit;
+    corner-shape: inherit;
+    inset: 0px;
+}
+
+.imgWrapper .img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    corner-shape: inherit;
+    object-position: center center;
+    object-fit: cover;
+}
+
+.projectLink:hover .imgWrapper .img{
+    transform: scale(1.1);
+}
+
+.descWrapper {
+    place-content: center space-between;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row;
+    height: min-content;
+    overflow: visible;
+    padding: 20px 24px !important;
+    position: relative;
+    width: 100%;
+    background-color: var(--token-5087bb56-e67b-4acc-afc9-0cb2e336d0c2, rgba(249, 249, 249, 0.1));
+    opacity: 1;
+}
+
+.text1{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    outline: none;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    white-space: pre;
+    width: auto;
+}
+
+.text2{
+    place-content: center;
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: row;
+    gap: 0px;
+    height: min-content;
+    overflow: visible;
+    padding: 0px;
+    position: relative;
+    width: min-content;
+}
+
+/* ../////////////.. */
+@media (max-width: 809.98px) {
+    div.projectContainer {
+        flex-flow: column;
+    }
+    div.projectContainer div.projectCard{
+        width: 100%;
+    }
+}
