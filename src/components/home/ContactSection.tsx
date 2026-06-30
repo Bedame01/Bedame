@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { siteConfig } from "@/data/site";
 
-import CustomButton from "@/components/kokonutui/CustomButton/CustomButton";
+// import CustomButton from "@/components/kokonutui/CustomButton/CustomButton";
 
 export default function ContactSection() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -23,7 +23,7 @@ export default function ContactSection() {
     setSuccess(null);
     setError(null);
     try {
-      const res = await fetch('/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'contact', ...form }),
@@ -59,7 +59,7 @@ export default function ContactSection() {
     setSubSuccess(null);
     setSubError(null);
     try {
-      const res = await fetch('/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ type: 'subscribe', email: newsletterEmail }),

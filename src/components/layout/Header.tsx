@@ -15,12 +15,12 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background">
-      <div className="container-wide flex items-center justify-between h-20 px-6 md:px-12 lg:px-20">
+      <div className="container-wide flex items-center justify-between h-20 px-6 md:px-8 lg:px-20">
         <Link href="/" className="text-display text-4xl! font-medium link-hover uppercase">
           {siteConfig.name}
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 lg:gap-12 lg:ml-10">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-12 lg:ml-10">
           {siteConfig.nav.map((item) => (
             <Link
               key={item.href}

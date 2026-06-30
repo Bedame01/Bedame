@@ -3,13 +3,15 @@ import Link from "next/link"
 import "./projects.css"
 // import { FadeIn } from "@/components/ui/FadeIn";
 import { projects } from "@/data/projects";
-import { projects2 } from "@/data/projects";
 
 const Projects = () => {
+  const firstColumnProjects = projects.slice(0, 2);
+  const secondColumnProjects = projects.slice(2);
+
   return (
     <section className="projectSection">
         <div className="projectContainer">
-            {projects.map((projectA) => (
+            {firstColumnProjects.map((projectA) => (
                 <Link
                     key={projectA.slug}
                     href={projectA.link}
@@ -40,7 +42,7 @@ const Projects = () => {
         </div>
         <div className="projectContainer2">
             <div className="wrapper">
-                {projects2.map((projectB) => (
+                {secondColumnProjects.map((projectB) => (
                     <Link
                     href={projectB.link}
                     key={projectB.slug}
